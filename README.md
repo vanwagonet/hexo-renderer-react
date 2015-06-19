@@ -5,7 +5,6 @@
 [![npm Version][npm-image]][npm]
 [![Dependency Status][deps-image]][deps]
 [![Dev Dependency Status][dev-deps-image]][dev-deps]
-[![Build Status][build-image]][build]
 
 [![JS Standard Style][style-image]][style]
 [![MIT License][license-image]][LICENSE]
@@ -38,8 +37,6 @@ This software is free to use under the MIT license. See the [LICENSE-MIT file][L
 [deps-image]: https://img.shields.io/david/thetalecrafter/hexo-renderer-react.svg
 [dev-deps]: https://david-dm.org/thetalecrafter/hexo-renderer-react#info=devDependencies
 [dev-deps-image]: https://img.shields.io/david/dev/thetalecrafter/hexo-renderer-react.svg
-[build]: https://travis-ci.org/thetalecrafter/hexo-renderer-react
-[build-image]: https://img.shields.io/travis/thetalecrafter/hexo-renderer-react.svg
 [style]: https://github.com/feross/standard
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [license-image]: https://img.shields.io/npm/l/hexo-renderer-react.svg
