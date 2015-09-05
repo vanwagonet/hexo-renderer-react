@@ -2,6 +2,7 @@
 var babel = require('babel-core')
 var React = require('react')
 var reval = require('eval')
+require('babel-core/register')
 
 hexo.extend.renderer.register('jsx', 'html', function (data, locals) {
   var js = babel.transform(data.text, {
