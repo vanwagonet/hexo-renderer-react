@@ -25,6 +25,12 @@ This requires you to have `react` installed as well.
 * `export default` or `module.exports =` your component class
 * ES6/7 syntax and JSX is handled by [`babel`][babel] (stage 0)
 
+#### Hexo Layout
+
+layout.jsx
+```js
+<div dangerouslySetInnerHTML={__html: this.props.body} />
+```
 
 ## License
 
