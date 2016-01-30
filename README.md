@@ -29,7 +29,7 @@ This requires you to have `react` installed as well.
 
 layout.jsx
 ```js
-<div dangerouslySetInnerHTML={__html: this.props.body} />
+<div dangerouslySetInnerHTML={{__html: this.props.body}} />
 ```
 
 ## License
