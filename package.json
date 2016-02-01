@@ -1,6 +1,6 @@
 {
   "name": "hexo-renderer-react",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "React+babel renderer plugin for Hexo",
   "keywords": [
     "hexo",
