@@ -13,7 +13,7 @@
 ## Install
 
 ``` bash
-$ npm install hexo-renderer-react react --save
+$ npm install hexo-renderer-react react react-dom --save
 ```
 
 This requires you to have `react` installed as well.
