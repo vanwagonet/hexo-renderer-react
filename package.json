@@ -25,9 +25,11 @@
   "homepage": "https://github.com/thetalecrafter/hexo-renderer-react",
   "dependencies": {
     "babel-core": "^6.4.5",
-    "eval": "^0.1.0",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "eval": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=0.14",
+    "react-dom": ">=0.14"
   },
   "devDependencies": {
     "standard": "^4.3.1"
