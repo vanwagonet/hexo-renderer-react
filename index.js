@@ -1,19 +1,12 @@
 /* global hexo */
-var babel = require('babel-core')
-var React = require('react')
-var ReactDOMServer = require('react-dom/server')
-var reval = require('eval')
-require('babel-core/register')
+'use strict'
 
-hexo.extend.renderer.register('jsx', 'html', function (data, locals) {
-  var js = babel.transform(data.text, { filename: data.path })
-  var Component = reval(js.code, data.path, null, true)
-  var element = React.createElement(Component.default || Component, locals)
-  var markup = ReactDOMServer.renderToStaticMarkup(element);
+var compile = require('./lib/compile')
 
-  if(markup.match(/^<html/)) {
-    markup = '<!doctype html>' + markup;
-  }
+function renderer (data, locals) {
+  return compile(data)(locals)
+}
 
-  return markup;
-}, true)
+renderer.compile = compile
+
+hexo.extend.renderer.register('jsx', 'html', renderer, true)
