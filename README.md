@@ -1,5 +1,7 @@
 # hexo-renderer-react
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thetalecrafter/hexo-renderer-react.svg)](https://greenkeeper.io/)
+
 > Render ES6 React components as hexo templates
 
 [![npm Version][npm-image]][npm]
