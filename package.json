@@ -11,18 +11,17 @@
   "main": "index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thetalecrafter/hexo-renderer-react.git"
+    "url": "https://github.com/vanwagonet/hexo-renderer-react.git"
   },
   "author": {
     "name": "Andy VanWagoner",
-    "email": "thetalecrafter@gmail.com",
-    "url": "https://thetalecrafter.com"
+    "email": "andy@vanwago.net"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thetalecrafter/hexo-renderer-react/issues"
+    "url": "https://github.com/vanwagonet/hexo-renderer-react/issues"
   },
-  "homepage": "https://github.com/thetalecrafter/hexo-renderer-react",
+  "homepage": "https://github.com/vanwagonet/hexo-renderer-react",
   "dependencies": {
     "babel-core": "^6.4.5",
     "eval": "^0.1.0"
