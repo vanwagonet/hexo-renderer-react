@@ -23,20 +23,25 @@
   },
   "homepage": "https://github.com/vanwagonet/hexo-renderer-react",
   "dependencies": {
-    "babel-core": "^6.4.5",
-    "eval": "^0.1.0"
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/register": "^7.17.7",
+    "eval": "^0.1.8",
+    "hexo": "^6.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "peerDependencies": {
-    "react": ">=0.14",
-    "react-dom": ">=0.14"
+    "hexo": ">=6.0.0",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
-    "mocha": "^3.0.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "standard": "^8.0.0"
+    "@types/hexo": "^3.8.7",
+    "@types/react": "^18.0.9",
+    "mocha": "^10.0.0",
+    "standard": "^17.0.0"
   },
   "scripts": {
     "pre-test": "standard",

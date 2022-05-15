@@ -1,12 +1,9 @@
 /* global hexo */
 'use strict'
 
-var compile = require('./lib/compile')
+const { mergeConfig } = require('./lib/config')
+const { getRenderer } = require('./lib/compile')
 
-function renderer (data, locals) {
-  return compile(data)(locals)
-}
+const config = mergeConfig(hexo)
 
-renderer.compile = compile
-
-hexo.extend.renderer.register('jsx', 'html', renderer, true)
+hexo.extend.renderer.register('jsx', 'html', getRenderer(config.react), true)

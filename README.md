@@ -23,11 +23,37 @@ This requires you to have `react` installed as well.
 
 * Name your components with the `.jsx` extension
 * `export default` or `module.exports =` your component class
-* ES6/7 syntax and JSX is handled by [`babel`][babel] Version 6
-  * `.babelrc` Config file [preset requirements][babel-6-setup]:
-    * [babel-preset-es2015][babel-preset-es2015]
-    * [babel-preset-react][babel-preset-react]
-    * [babel-preset-stage-0][babel-preset-stage-0]
+* ES syntax and JSX is handled by [`babel`][babel] version 7, with the following two presets enabled by default:
+  * [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+  * [@babel/preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react)
+
+
+## Config
+
+*_config.yml*
+
+```yaml
+# Renderer
+react:
+  # Babel options
+  # https://babeljs.io/docs/en/options
+  babel:
+    # Babel presets
+    # If you want to use your own presets, don't forget to install them first.
+    # Default: ['@babel/preset-env', '@babel/preset-react']
+    presets: ["@babel/preset-env", "@babel/preset-react"]
+
+    # Babel plugins
+    # Default: []
+    plugins: []
+
+    # Other babel options
+    # ...
+
+  # Other renderer options
+  # ...
+```
+
 
 ### Examples
 
@@ -64,6 +90,41 @@ export default class extends React.Component {
       </div>
     )
   }
+}
+```
+
+*head.jsx*
+```js
+import React from 'react'
+import parse from 'html-react-parser' // To use the html-react-parser library, you need to install it first.
+
+export default props => {
+  const { config, theme, favicon_tag, css, js } = props
+
+  return (
+    <head>
+      <meta httpEquiv='content-type' content='text/html; charset=utf-8' />
+      <meta charSet='utf-8' />
+
+      <meta
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+        name='viewport'
+      />
+
+      <title>{config.title}</title>
+      <meta name='title' content={config.title} />
+      <meta name='description' content={config.description} />
+
+      <meta property='og:image' content={`/${theme.favicon}`} />
+      <meta property='og:image:width' content='200' />
+      <meta property='og:image:height' content='200' />
+
+      {parse(favicon_tag(theme.favicon))}
+
+      {parse(css('css/style.css'))}
+      {parse(js('js/jquery.min.js'))}
+    </head>
+  )
 }
 ```
 
